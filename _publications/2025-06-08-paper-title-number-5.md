@@ -3,7 +3,7 @@ header:
   teaser: /images/profile.png
 title: "Paper Title Number 5, with math $$E=mc^2$$"
 authors: "author A, author B, author C"
-venue: 'GitHub Journal of Bugs'
+venue: 'xxx'
 date: 2024-02-17
 
 excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'

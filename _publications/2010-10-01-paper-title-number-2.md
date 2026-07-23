@@ -3,7 +3,7 @@ header:
   teaser: /images/profile.png
 title: "Paper Title Number 2"
 authors: "author A, author B, author C"
-venue: "MICCAI 2026"
+venue: "xxx 2026"
 date: 2009-10-01
 
 excerpt: 'This paper is about the number 2. The number 3 is left for future work.'

@@ -3,7 +3,7 @@ header:
   teaser: /images/profile.png
 title: "Paper Title Number 4"
 authors: "author A, author B, author C"
-venue: 'GitHub Journal of Bugs'
+venue: 'xxx'
 date: 2024-02-17
 
 excerpt: 'This paper is about fixing template issue #693.'
