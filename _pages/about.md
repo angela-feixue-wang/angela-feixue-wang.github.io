@@ -62,8 +62,8 @@ More info about configuring Academic Pages can be found in [the guide](https://a
 ------
 <!-- {% include update-timestamp.html %} -->
 
-{% include footer.html %}
+<!-- {% include footer.html %} -->
 
-<!-- <div style="margin-top: 2rem;">
+<div style="margin-top: 2rem;">
   {% include footer.html %}
-</div> -->
+</div>
