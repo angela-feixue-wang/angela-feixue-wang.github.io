@@ -1,0 +1,85 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% elsif post.teaser %}
+  {% capture teaser %}{{ post.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="pub-card">
+  {% if teaser %}
+    <div class="pub-card__media">
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}">
+      {% elsif post.link %}
+        <a href="{{ post.link }}">
+      {% elsif post.url %}
+        <a href="{{ base_path }}{{ post.url }}">
+      {% endif %}
+
+      <img
+        class="pub-card__image"
+        src="{% if teaser contains '://' %}{{ teaser }}{% else %}{{ teaser | prepend: '/images/' | prepend: base_path }}{% endif %}"
+        alt="{{ title | strip_html | escape }}">
+
+      {% if post.paperurl or post.link or post.url %}
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="pub-card__body">
+    <h2 class="archive__item-title pub-card__title" itemprop="headline">
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}">{{ title }}</a>
+      {% elsif post.link %}
+        <a href="{{ post.link }}">{{ title }}</a>
+      {% elsif post.url %}
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {% else %}
+        {{ title }}
+      {% endif %}
+    </h2>
+
+    {% if post.authors %}
+      <p class="pub-card__authors">{{ post.authors }}</p>
+    {% endif %}
+
+    {% if post.venue or post.date %}
+      <p class="pub-card__meta">
+        {% if post.venue %}<i>{{ post.venue }}</i>{% endif %}
+        {% if post.venue and post.date %}, {% endif %}
+        {% if post.date %}{{ post.date | date: "%Y" }}{% endif %}
+      </p>
+    {% endif %}
+
+    {% if post.excerpt %}
+      <p class="archive__item-excerpt" itemprop="description">
+        {{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}
+      </p>
+    {% endif %}
+
+    <p class="pub-card__links">
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}">Paper</a>
+      {% endif %}
+      {% if post.slidesurl %}
+        {% if post.paperurl %} | {% endif %}<a href="{{ post.slidesurl }}">Slides</a>
+      {% endif %}
+      {% if post.bibtexurl %}
+        {% if post.paperurl or post.slidesurl %} | {% endif %}<a href="{{ post.bibtexurl }}">BibTeX</a>
+      {% endif %}
+      {% if post.url %}
+        {% if post.paperurl or post.slidesurl or post.bibtexurl %} | {% endif %}<a href="{{ base_path }}{{ post.url }}" rel="permalink">Details</a>
+      {% endif %}
+    </p>
+  </div>
+</div>

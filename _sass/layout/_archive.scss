@@ -107,6 +107,49 @@
   }
 }
 
+.pub-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.pub-card__media {
+  flex: 0 0 180px;
+}
+
+.pub-card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.pub-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.pub-card__title {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.pub-card__authors,
+.pub-card__meta,
+.pub-card__links,
+.archive__item-excerpt {
+  margin: 0.25rem 0 0.6rem;
+}
+
+.pub-card__authors {
+  font-style: italic;
+}
+
+.pub-card__links {
+  font-size: 0.95rem;
+}
 
 /*
    Grid view

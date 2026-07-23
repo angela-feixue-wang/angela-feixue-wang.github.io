@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "mint" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Angela Feixue Wang"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Angela Feixue Wang"
 description              : &description "Angela Feixue Wang's personal website"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -27,7 +27,7 @@ author:
   name             : "Angela Feixue Wang"
   pronouns         : # example: "she/her"  
   bio              : "Machine Learning Researcher"
-  # location         : "Earth"
+  location         : # "Earth"
   employer         : "University of Oxford"
   uri              : # URL
   email            : "feixue.wang@eng.ox.ac.uk" 
@@ -82,14 +82,15 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+# # Publication Category - The following the list of publication categories and their headings
+# # Enabling this category will sort publications according to publication category.
+# publication_category:
+#   books:
+#     title: 'Books'
+#   manuscripts:
+#     title: 'Journal Articles'    
+#   conferences:
+#     title: 'Conference Papers'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
