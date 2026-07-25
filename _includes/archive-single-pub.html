@@ -53,9 +53,7 @@
 
     {% if post.venue or post.date %}
       <p class="pub-card__meta">
-        {% if post.venue %}<i>{{ post.venue }}</i>{% endif %}
-        {% if post.venue and post.date %}, {% endif %}
-        {% if post.date %}{{ post.date | date: "%Y" }}{% endif %}
+        <i>{% if post.venue %}{{ post.venue }}{% endif %}{% if post.venue and post.date %}, {% endif %}{% if post.date %}{{ post.date | date: "%Y" }}{% endif %}</i>
       </p>
     {% endif %}
 
@@ -74,9 +72,6 @@
       {% endif %}
       {% if post.bibtexurl %}
         {% if post.paperurl or post.slidesurl %} | {% endif %}<a href="{{ post.bibtexurl }}">BibTeX</a>
-      {% endif %}
-      {% if post.url %}
-        {% if post.paperurl or post.slidesurl or post.bibtexurl %} | {% endif %}<a href="{{ base_path }}{{ post.url }}" rel="permalink">Details</a>
       {% endif %}
     </p>
   </div>
