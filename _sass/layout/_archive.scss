@@ -121,7 +121,8 @@
 
 .pub-card__image {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: fill;
   display: block;
   border-radius: 4px;
 }

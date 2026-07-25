@@ -1,14 +1,14 @@
 ---
 header:
-  teaser: /images/profile.png
+  teaser: /profile-blank.png
 title: "Paper Title Number 5, with math $$E=mc^2$$"
 authors: "author A, author B, author C"
 venue: 'xxx'
 date: 2024-02-17
 
 excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'
-permalink: /publication/2024-02-17-paper-title-number-4
-collection: publications
+permalink: /research/2024-02-17-paper-title-number-4
+collection: research
 category: conferences
 
 paperurl: 'https://academicpages.github.io/files/paper3.pdf'

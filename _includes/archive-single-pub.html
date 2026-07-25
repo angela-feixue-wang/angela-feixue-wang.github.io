@@ -38,9 +38,7 @@
 
   <div class="pub-card__body">
     <h2 class="archive__item-title pub-card__title" itemprop="headline">
-      {% if post.paperurl %}
-        <a href="{{ post.paperurl }}">{{ title }}</a>
-      {% elsif post.link %}
+      {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a>
       {% elsif post.url %}
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>

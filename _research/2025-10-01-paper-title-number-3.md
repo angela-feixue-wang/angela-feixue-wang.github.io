@@ -1,14 +1,14 @@
 ---
 header:
-  teaser: /images/profile.png
+  teaser: /profile-blank.png
 title: "Paper Title Number 3"
 authors: "author A, author B, author C"
 venue: "xxx 2026"
 date: 2015-10-01
 
 excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
-permalink: /publication/2015-10-01-paper-title-number-3
-collection: publications
+permalink: /research/2015-10-01-paper-title-number-3
+collection: research
 category: manuscripts
 
 slidesurl: 'https://academicpages.github.io/files/slides3.pdf'
